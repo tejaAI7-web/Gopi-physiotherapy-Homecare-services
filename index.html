@@ -27,11 +27,11 @@
             line-height: 1.6;
         }
 
-        /* Premium Smooth Entrance Animations */
+        /* Premium Smooth Entrance Scroll Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(40px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -40,14 +40,14 @@
         }
 
         .animated-hero {
-            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
         .animated-section {
-            animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
-        /* Header Navigation */
+        /* Fixed Navigation Header */
         header {
             background-color: var(--white);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -71,6 +71,7 @@
             font-weight: 700;
             color: var(--primary-blue);
             font-size: 1.3rem;
+            text-transform: uppercase;
         }
 
         nav a {
@@ -99,12 +100,13 @@
             transform: translateY(-2px);
         }
 
-        /* Hero Layout */
+        /* Optimized Mobile-First Hero Section */
         .hero {
-            padding: 140px 20px 60px 20px;
+            padding: 120px 20px 40px 20px;
             background: linear-gradient(135deg, #F0F4F8 0%, #FFFFFF 100%);
             display: flex;
             justify-content: center;
+            align-items: center;
         }
 
         .hero-container {
@@ -112,13 +114,13 @@
             max-width: 1200px;
             width: 100%;
             align-items: center;
-            gap: 50px;
+            gap: 40px;
         }
 
-        .hero-content { flex: 1; }
+        .hero-content { flex: 1.2; }
 
         .hero-content h1 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             color: var(--primary-blue);
             line-height: 1.2;
             margin-bottom: 20px;
@@ -126,14 +128,14 @@
 
         .hero-content p {
             font-size: 1.1rem;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             color: #5A6B7C;
         }
 
         .hero-buttons {
             display: flex;
             gap: 15px;
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
 
         .btn-action {
@@ -151,62 +153,78 @@
         .btn-whatsapp:hover { background-color: #128C7E; transform: translateY(-2px); }
         .btn-call:hover { background-color: #CBD5E1; transform: translateY(-2px); }
 
-        .hero-stats { display: flex; gap: 40px; }
-        .stat-item h3 { font-size: 2rem; color: var(--primary-blue); }
+        .hero-stats { display: flex; gap: 30px; }
+        .stat-item h3 { font-size: 1.8rem; color: var(--primary-blue); }
+        .stat-item p { font-size: 0.9rem; color: #64748B; }
 
+        /* Dr. Gopi Profile Layout Control */
         .hero-image-box {
-            flex: 1;
+            flex: 0.8;
             display: flex;
             justify-content: center;
+            align-items: center;
+        }
+
+        .profile-card-wrapper {
+            background: radial-gradient(circle, #E2E8F0 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 400px;
+            width: 100%;
         }
 
         .hero-image-box img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
-            border-radius: 20px;
+            max-height: 450px;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
         }
 
-        /* Quick Info Sticky Banner */
+        /* Quick Info Spacing Banner */
         .info-banner {
             max-width: 1200px;
-            margin: -30px auto 60px auto;
+            margin: -20px auto 50px auto;
             background-color: var(--white);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
             border-radius: 10px;
             display: flex;
             justify-content: space-around;
-            padding: 25px;
+            padding: 20px;
             position: relative;
             z-index: 10;
         }
 
-        .info-card { text-align: center; }
-        .info-card strong { color: var(--primary-blue); display: block; margin-bottom: 5px; }
+        .info-card strong { color: var(--primary-blue); display: block; margin-bottom: 4px; }
+        .info-card p { font-size: 0.95rem; color: #475569; }
 
-        /* Modern Feature Showcase Block (Fills Spacing Flaws) */
+        /* Facility Showcase */
         .showcase-section {
             max-width: 1200px;
-            margin: 0 auto 60px auto;
+            margin: 0 auto 50px auto;
             padding: 0 20px;
             display: flex;
             align-items: center;
-            gap: 50px;
+            gap: 40px;
         }
 
         .showcase-img {
             flex: 1;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
             width: 100%;
-            height: 350px;
+            height: 320px;
             object-fit: cover;
         }
 
         .showcase-text { flex: 1; }
         .showcase-text h2 { color: var(--primary-blue); font-size: 2.2rem; margin-bottom: 15px; }
-        .showcase-text p { margin-bottom: 15px; color: #5A6B7C; }
+        .showcase-text p { margin-bottom: 15px; color: #475569; }
 
-        /* Services Grid Layout */
+        /* Services Grid Area */
         .services {
             padding: 60px 20px;
             background-color: var(--bg-light);
@@ -214,99 +232,172 @@
         }
 
         .services h2 {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             color: var(--primary-blue);
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .service-card {
             background-color: var(--white);
-            border-radius: 12px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 12 rgba(0,0,0,0.02);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+            transform: translateY(-6px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
         }
 
         .service-card img {
             width: 100%;
-            height: 220px;
+            height: 210px;
             object-fit: cover;
         }
 
         .service-info {
-            padding: 25px;
+            padding: 20px;
             text-align: left;
         }
 
-        .service-info h3 { color: var(--primary-blue); margin-bottom: 10px; }
+        .service-info h3 { color: var(--primary-blue); margin-bottom: 8px; font-size: 1.25rem; }
+        .service-info p { color: #475569; font-size: 0.95rem; }
 
-        /* Footer */
+        /* Google Reviews Section */
+        .reviews-section {
+            padding: 60px 20px;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .reviews-section h2 {
+            font-size: 2.3rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .reviews-subtitle {
+            color: #64748B;
+            margin-bottom: 35px;
+            font-size: 1.1rem;
+        }
+
+        .reviews-scroll-container {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 10px 10px 25px 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: thin;
+        }
+
+        .review-screenshot-card {
+            flex: 0 0 auto;
+            width: 280px;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            overflow: hidden;
+            scroll-snap-align: start;
+            border: 1px solid #E2E8F0;
+        }
+
+        .review-screenshot-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Footer Engine */
         footer {
             background-color: #0F172A;
             color: #94A3B8;
-            padding: 60px 20px 20px 20px;
+            padding: 50px 20px 20px 20px;
         }
 
         .footer-container {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 35px;
             border-bottom: 1px solid #334155;
-            padding-bottom: 40px;
+            padding-bottom: 35px;
         }
 
-        .footer-box h4 { color: var(--white); margin-bottom: 20px; font-size: 1.2rem; }
-        .footer-box p { margin-bottom: 10px; }
+        .footer-box h4 { color: var(--white); margin-bottom: 15px; font-size: 1.15rem; }
+        .footer-box p { margin-bottom: 8px; font-size: 0.95rem; }
         .footer-box a { color: var(--white); text-decoration: none; }
 
-        .copyright { text-align: center; padding-top: 20px; font-size: 0.9rem; }
+        .copyright { text-align: center; padding-top: 20px; font-size: 0.85rem; }
 
-        /* Mobile Devices Adaptive Framework Rules */
+        /* Mobile Adaptive Viewport Rules */
         @media (max-width: 968px) {
-            .hero-container, .showcase-section {
-                flex-direction: column-reverse;
+            .hero-container {
+                flex-direction: column;
                 text-align: center;
+                gap: 25px;
             }
-            .hero-content h1 { font-size: 2.2rem; }
-            .hero-buttons, .hero-stats { justify-content: center; }
+            .hero { padding-top: 100px; }
+            .hero-content h1 { font-size: 2.1rem; }
+            .hero-buttons { justify-content: center; }
+            .hero-stats { justify-content: center; gap: 20px; }
+            
+            .hero-image-box {
+                width: 100%;
+                order: -1;
+            }
+            .profile-card-wrapper {
+                max-width: 220px;
+                padding: 5px;
+            }
+            .hero-image-box img {
+                max-height: 240px;
+            }
+
             .info-banner {
                 flex-direction: column;
-                margin: 20px;
+                margin: 15px;
+                gap: 15px;
+                text-align: center;
+            }
+            .showcase-section {
+                flex-direction: column;
+                text-align: center;
                 gap: 20px;
             }
-            .showcase-img { height: 250px; }
+            .showcase-img { height: 220px; }
             nav { display: none; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Header Navigation -->
     <header>
         <div class="nav-container">
-            <div class="logo">GOPI PHYSIOTHERAPY</div>
+            <div class="logo">Gopi Physiotherapy</div>
             <nav>
                 <a href="#home">Home</a>
                 <a href="#services">Services</a>
+                <a href="#reviews">Reviews</a>
             </nav>
             <button class="btn-cta" onclick="window.location.href='tel:+918686323206'">Book Home Visit</button>
         </div>
     </header>
 
+    <!-- Hero Area -->
     <section class="hero" id="home">
         <div class="hero-container animated-hero">
             <div class="hero-content">
@@ -323,18 +414,21 @@
                 </div>
             </div>
             <div class="hero-image-box">
-                <img src="gopi-transparent.png" alt="Dr. Gopi Krishna">
+                <div class="profile-card-wrapper">
+                    <img src="gopi-transparent.png" alt="Dr. Gopi Krishna">
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Info Banner Section -->
     <div class="info-banner animated-section">
         <div class="info-card"><strong>🕒 Clinic Timings</strong><p>Mon - Sat: 9:00 AM - 8:00 PM</p></div>
         <div class="info-card"><strong>📍 Service Area</strong><p>Moti Nagar, Erragadda, Hyderabad</p></div>
         <div class="info-card"><strong>🚗 Care Delivery</strong><p>In-Clinic & Dedicated Home Visits</p></div>
     </div>
 
-    <!-- New Showcase Block Utilizing clinic-view.png -->
+    <!-- Facility Showcase Section -->
     <section class="showcase-section animated-section">
         <img src="clinic-view.png" alt="Physiotherapy Studio Setup" class="showcase-img">
         <div class="showcase-text">
@@ -344,25 +438,26 @@
         </div>
     </section>
 
+    <!-- Services Section (Corrected Filenames Applied Here) -->
     <section class="services" id="services">
         <h2>Move Freely, Live Fully With Our Care</h2>
         <div class="services-grid">
             <div class="service-card">
-                <img src="clinic-ortho.png" alt="Orthopedic Rehabilitation">
+                <img src="service-ortho.jpg" alt="Orthopedic Rehabilitation">
                 <div class="service-info">
                     <h3>Ortho & Joint Rehab</h3>
                     <p>Advanced treatment for corporate spinal alignments, posture correction, chronic back pain, and complete post-surgical orthopedic solutions.</p>
                 </div>
             </div>
             <div class="service-card">
-                <img src="clinic-neuro.png" alt="Neurological Therapy">
+                <img src="service-neuro.png" alt="Neurological Therapy">
                 <div class="service-info">
                     <h3>Neurological Therapy</h3>
                     <p>Dedicated clinical physical assessment pathways covering stroke recovery tracker metrics, paralysis, and balance exercises.</p>
                 </div>
             </div>
             <div class="service-card">
-                <img src="clinic-homecare.png" alt="Expert Home Care">
+                <img src="service-homecare.jpg" alt="Expert Home Care">
                 <div class="service-info">
                     <h3>Expert Home Care</h3>
                     <p>Compassionate, professional clinical rehabilitation setups brought directly to your bedroom or home space for maximum ease.</p>
@@ -371,6 +466,20 @@
         </div>
     </section>
 
+    <!-- Google Reviews Display -->
+    <section class="reviews-section" id="reviews">
+        <h2>What Patients Are Saying</h2>
+        <p class="reviews-subtitle">Real verified feedback from our Google Maps Business Profile</p>
+        <div class="reviews-scroll-container">
+            <div class="review-screenshot-card"><img src="physio-review1.png" alt="Review 1"></div>
+            <div class="review-screenshot-card"><img src="physio-review2.png" alt="Review 2"></div>
+            <div class="review-screenshot-card"><img src="physio-review3.png" alt="Review 3"></div>
+            <div class="review-screenshot-card"><img src="physio-review4.png" alt="Review 4"></div>
+            <div class="review-screenshot-card"><img src="physio-review5.png" alt="Review 5"></div>
+        </div>
+    </section>
+
+    <!-- Footer Structure -->
     <footer>
         <div class="footer-container">
             <div class="footer-box">
@@ -391,4 +500,3 @@
 
 </body>
 </html>
-

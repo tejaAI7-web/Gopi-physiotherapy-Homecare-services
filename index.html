@@ -27,7 +27,7 @@
             line-height: 1.6;
         }
 
-        /* Smooth Entrance Scroll Animations */
+        /* Premium Smooth Entrance Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -100,7 +100,7 @@
             transform: translateY(-2px);
         }
 
-        /* Optimized Hero Layout */
+        /* Optimized Hero Layout Engine */
         .hero {
             padding: 120px 20px 40px 20px;
             background: linear-gradient(135deg, #F0F4F8 0%, #FFFFFF 100%);
@@ -153,7 +153,7 @@
         .btn-whatsapp:hover { background-color: #128C7E; transform: translateY(-2px); }
         .btn-call:hover { background-color: #CBD5E1; transform: translateY(-2px); }
 
-        .hero-stats { display: flex; gap: 30px; }
+        .hero-stats { display: flex; gap: 40px; }
         .stat-item h3 { font-size: 1.8rem; color: var(--primary-blue); }
         .stat-item p { font-size: 0.9rem; color: #64748B; }
 
@@ -183,7 +183,7 @@
             filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
         }
 
-        /* Quick Info Space Filler Banner */
+        /* Quick Info Banner */
         .info-banner {
             max-width: 1200px;
             margin: -20px auto 50px auto;
@@ -223,7 +223,7 @@
         .showcase-text h2 { color: var(--primary-blue); font-size: 2.2rem; margin-bottom: 15px; }
         .showcase-text p { margin-bottom: 15px; color: #475569; }
 
-        /* Services Grid Layout Area */
+        /* Services Grid Area */
         .services {
             padding: 60px 20px;
             background-color: var(--bg-light);
@@ -271,63 +271,83 @@
         .service-info h3 { color: var(--primary-blue); margin-bottom: 8px; font-size: 1.25rem; }
         .service-info p { color: #475569; font-size: 0.95rem; }
 
-        /* Google Reviews Section with Hidden Scrollbar */
+        /* Premium Google Review Image Carousel System */
         .reviews-section {
             padding: 60px 20px;
             background-color: var(--white);
             text-align: center;
         }
 
+        .reviews-section h3 {
+            color: #4A90E2;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
         .reviews-section h2 {
-            font-size: 2.3rem;
-            color: var(--primary-blue);
-            margin-bottom: 15px;
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 40px;
+            font-weight: 800;
         }
 
-        .reviews-subtitle {
-            color: #64748B;
-            margin-bottom: 35px;
-            font-size: 1.1rem;
-        }
-
-        .reviews-scroll-container {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            padding: 10px 10px 25px 10px;
-            max-width: 1200px;
+        .slider-outer-wrapper {
+            position: relative;
+            max-width: 380px; /* Perfectly frames the image screenshot width */
             margin: 0 auto;
-            scroll-snap-type: x mandatory;
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        /* Hide scrollbar for Chrome, Safari and Opera */
-        .reviews-scroll-container::-webkit-scrollbar {
-            display: none;
-        }
-
-        /* Hide scrollbar for IE, Edge and Firefox */
-        .reviews-scroll-container {
-            -ms-overflow-style: none;  
-            scrollbar-width: none;  
-        }
-
-        .review-screenshot-card {
-            flex: 0 0 calc(33.333% - 14px);
-            min-width: 300px;
-            background-color: var(--white);
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
             overflow: hidden;
-            scroll-snap-align: start;
-            border: 1px solid #E2E8F0;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            background-color: var(--white);
         }
 
-        .review-screenshot-card img {
+        .reviews-slider-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            width: 100%;
+        }
+
+        .review-slide-card {
+            flex: 0 0 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .review-slide-card img {
             width: 100%;
             height: auto;
-            display: block;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        /* Custom Dots Navigation indicators */
+        .slider-dots-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .dot-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #CBD5E1;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot-indicator.active-dot {
+            background-color: var(--accent-blue);
+            transform: scale(1.2);
+            width: 24px;
+            border-radius: 6px;
         }
 
         /* Footer Engine */
@@ -353,7 +373,7 @@
 
         .copyright { text-align: center; padding-top: 20px; font-size: 0.85rem; }
 
-        /* Strict Responsive Mobile Ruleset */
+        /* Mobile Layout Breakpoint Control Rulesets */
         @media (max-width: 968px) {
             .hero-container {
                 flex-direction: column;
@@ -363,7 +383,7 @@
             .hero { padding-top: 100px; }
             .hero-content h1 { font-size: 2.1rem; }
             .hero-buttons { justify-content: center; }
-            .hero-stats { justify-content: center; gap: 20px; }
+            .hero-stats { justify-content: center; gap: 25px; }
             
             .hero-image-box {
                 width: 100%;
@@ -373,9 +393,7 @@
                 max-width: 220px;
                 padding: 5px;
             }
-            .hero-image-box img {
-                max-height: 240px;
-            }
+            .hero-image-box img { max-height: 240px; }
 
             .info-banner {
                 flex-direction: column;
@@ -389,10 +407,7 @@
                 gap: 20px;
             }
             .showcase-img { height: 220px; }
-            .review-screenshot-card {
-                flex: 0 0 85%;
-                min-width: 270px;
-            }
+            .slider-outer-wrapper { max-width: 90%; }
             nav { display: none; }
         }
     </style>
@@ -421,9 +436,9 @@
                     <a href="tel:+918686323206" class="btn-action btn-call">Call Desk</a>
                 </div>
                 <div class="hero-stats">
-                    <div class="stat-item"><h3>81+</h3><p>Perfect Reviews</p></div>
                     <div class="stat-item"><h3>5.0★</h3><p>Google Rating</p></div>
                     <div class="stat-item"><h3>100%</h3><p>Home Care Visit</p></div>
+                    <div class="stat-item"><h3>Trusted</h3><p>Expert Therapy</p></div>
                 </div>
             </div>
             <div class="hero-image-box">
@@ -440,7 +455,6 @@
         <div class="info-card"><strong>🚗 Care Delivery</strong><p>In-Clinic & Dedicated Home Visits</p></div>
     </div>
 
-    <!-- Corrected Showcase Section Mapping -->
     <section class="showcase-section animated-section">
         <img src="clinic-view.png" alt="Advanced Physiotherapy Clinic Setup" class="showcase-img">
         <div class="showcase-text">
@@ -450,7 +464,6 @@
         </div>
     </section>
 
-    <!-- Corrected Services Grid Section Mapping -->
     <section class="services" id="services">
         <h2>Move Freely, Live Fully With Our Care</h2>
         <div class="services-grid">
@@ -478,16 +491,49 @@
         </div>
     </section>
 
-    <!-- Automated Review Carousel Section -->
+    <!-- 5-Second Dots Automated Image Slider System -->
     <section class="reviews-section" id="reviews">
-        <h2>What Patients Are Saying</h2>
-        <p class="reviews-subtitle">Real verified feedback from our Google Maps Business Profile</p>
-        <div class="reviews-scroll-container" id="reviews-slider">
-            <div class="review-screenshot-card"><img src="physio-review1.png" alt="Google Review Card 1"></div>
-            <div class="review-screenshot-card"><img src="physio-review2.png" alt="Google Review Card 2"></div>
-            <div class="review-screenshot-card"><img src="physio-review3.png" alt="Google Review Card 3"></div>
-            <div class="review-screenshot-card"><img src="physio-review4.png" alt="Google Review Card 4"></div>
-            <div class="review-screenshot-card"><img src="physio-review5.png" alt="Google Review Card 5"></div>
+        <h3>Patient Satisfaction</h3>
+        <h2>5.0★ Google Reviews</h2>
+        
+        <div class="slider-outer-wrapper">
+            <div class="reviews-slider-track" id="reviewTrack">
+                
+                <!-- Slide Image Card 1 -->
+                <div class="review-slide-card">
+                    <img src="physio-review1.png" alt="Google Review Screenshot 1">
+                </div>
+
+                <!-- Slide Image Card 2 -->
+                <div class="review-slide-card">
+                    <img src="physio-review2.png" alt="Google Review Screenshot 2">
+                </div>
+
+                <!-- Slide Image Card 3 -->
+                <div class="review-slide-card">
+                    <img src="physio-review3.png" alt="Google Review Screenshot 3">
+                </div>
+
+                <!-- Slide Image Card 4 -->
+                <div class="review-slide-card">
+                    <img src="physio-review4.png" alt="Google Review Screenshot 4">
+                </div>
+
+                <!-- Slide Image Card 5 -->
+                <div class="review-slide-card">
+                    <img src="physio-review5.png" alt="Google Review Screenshot 5">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Pagination Active Dots Navigation Bar -->
+        <div class="slider-dots-nav" id="dotsNav">
+            <div class="dot-indicator active-dot" onclick="moveToSlide(0)"></div>
+            <div class="dot-indicator" onclick="moveToSlide(1)"></div>
+            <div class="dot-indicator" onclick="moveToSlide(2)"></div>
+            <div class="dot-indicator" onclick="moveToSlide(3)"></div>
+            <div class="dot-indicator" onclick="moveToSlide(4)"></div>
         </div>
     </section>
 
@@ -509,31 +555,33 @@
         </div>
     </footer>
 
-    <!-- 5-Second Automated Review Engine Script -->
+    <!-- Slider Javascript Control Architecture -->
     <script>
-        const slider = document.getElementById('reviews-slider');
-        let index = 0;
+        const track = document.getElementById('reviewTrack');
+        const dotsNav = document.getElementById('dotsNav');
+        const dots = Array.from(dotsNav.children);
+        let currentSlideIndex = 0;
+        const totalSlides = dots.length;
 
-        function autoScrollReviews() {
-            if (!slider) return;
+        function moveToSlide(slideIndex) {
+            currentSlideIndex = slideIndex;
+            track.style.transform = `translateX(-${slideIndex * 100}%)`;
             
-            const cards = slider.querySelectorAll('.review-screenshot-card');
-            if (cards.length === 0) return;
-
-            // Calculate exact scroll steps based on card dimension and container sizes
-            const cardWidth = cards[0].offsetWidth + 20; // Includes the 20px flex-gap
-            index++;
-
-            if (index >= cards.length - 1 || slider.scrollLeft >= (slider.scrollWidth - slider.clientWidth - 10)) {
-                index = 0;
-                slider.scrollTo({ left: 0, behavior: 'smooth' });
-            } else {
-                slider.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
-            }
+            // Toggle Dot State Indicators
+            dots.forEach(dot => dot.classList.remove('active-dot'));
+            dots[slideIndex].classList.add('active-dot');
         }
 
-        // Trigger loop cycle precisely every 5000 milliseconds
-        setInterval(autoScrollReviews, 5000);
+        function autoLoopCycle() {
+            currentSlideIndex++;
+            if (currentSlideIndex >= totalSlides) {
+                currentSlideIndex = 0;
+            }
+            moveToSlide(currentSlideIndex);
+        }
+
+        // Run rotation index looping engine precisely every 5 seconds
+        setInterval(autoLoopCycle, 5000);
     </script>
 </body>
 </html>

@@ -27,7 +27,7 @@
             line-height: 1.6;
         }
 
-        /* Premium Smooth Entrance Scroll Animations */
+        /* Smooth Entrance Scroll Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -100,7 +100,7 @@
             transform: translateY(-2px);
         }
 
-        /* Optimized Mobile-First Hero Section */
+        /* Optimized Hero Layout */
         .hero {
             padding: 120px 20px 40px 20px;
             background: linear-gradient(135deg, #F0F4F8 0%, #FFFFFF 100%);
@@ -157,7 +157,6 @@
         .stat-item h3 { font-size: 1.8rem; color: var(--primary-blue); }
         .stat-item p { font-size: 0.9rem; color: #64748B; }
 
-        /* Dr. Gopi Profile Layout Control */
         .hero-image-box {
             flex: 0.8;
             display: flex;
@@ -184,7 +183,7 @@
             filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
         }
 
-        /* Quick Info Spacing Banner */
+        /* Quick Info Space Filler Banner */
         .info-banner {
             max-width: 1200px;
             margin: -20px auto 50px auto;
@@ -201,7 +200,7 @@
         .info-card strong { color: var(--primary-blue); display: block; margin-bottom: 4px; }
         .info-card p { font-size: 0.95rem; color: #475569; }
 
-        /* Facility Showcase */
+        /* Facility Showcase Section */
         .showcase-section {
             max-width: 1200px;
             margin: 0 auto 50px auto;
@@ -224,7 +223,7 @@
         .showcase-text h2 { color: var(--primary-blue); font-size: 2.2rem; margin-bottom: 15px; }
         .showcase-text p { margin-bottom: 15px; color: #475569; }
 
-        /* Services Grid Area */
+        /* Services Grid Layout Area */
         .services {
             padding: 60px 20px;
             background-color: var(--bg-light);
@@ -249,7 +248,7 @@
             background-color: var(--white);
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 12 rgba(0,0,0,0.02);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
@@ -272,7 +271,7 @@
         .service-info h3 { color: var(--primary-blue); margin-bottom: 8px; font-size: 1.25rem; }
         .service-info p { color: #475569; font-size: 0.95rem; }
 
-        /* Google Reviews Section */
+        /* Google Reviews Section with Hidden Scrollbar */
         .reviews-section {
             padding: 60px 20px;
             background-color: var(--white);
@@ -299,12 +298,24 @@
             max-width: 1200px;
             margin: 0 auto;
             scroll-snap-type: x mandatory;
-            scrollbar-width: thin;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .reviews-scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .reviews-scroll-container {
+            -ms-overflow-style: none;  
+            scrollbar-width: none;  
         }
 
         .review-screenshot-card {
-            flex: 0 0 auto;
-            width: 280px;
+            flex: 0 0 calc(33.333% - 14px);
+            min-width: 300px;
             background-color: var(--white);
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.06);
@@ -342,7 +353,7 @@
 
         .copyright { text-align: center; padding-top: 20px; font-size: 0.85rem; }
 
-        /* Mobile Adaptive Viewport Rules */
+        /* Strict Responsive Mobile Ruleset */
         @media (max-width: 968px) {
             .hero-container {
                 flex-direction: column;
@@ -378,13 +389,16 @@
                 gap: 20px;
             }
             .showcase-img { height: 220px; }
+            .review-screenshot-card {
+                flex: 0 0 85%;
+                min-width: 270px;
+            }
             nav { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
     <header>
         <div class="nav-container">
             <div class="logo">Gopi Physiotherapy</div>
@@ -397,7 +411,6 @@
         </div>
     </header>
 
-    <!-- Hero Area -->
     <section class="hero" id="home">
         <div class="hero-container animated-hero">
             <div class="hero-content">
@@ -421,16 +434,15 @@
         </div>
     </section>
 
-    <!-- Info Banner Section -->
     <div class="info-banner animated-section">
         <div class="info-card"><strong>🕒 Clinic Timings</strong><p>Mon - Sat: 9:00 AM - 8:00 PM</p></div>
         <div class="info-card"><strong>📍 Service Area</strong><p>Moti Nagar, Erragadda, Hyderabad</p></div>
         <div class="info-card"><strong>🚗 Care Delivery</strong><p>In-Clinic & Dedicated Home Visits</p></div>
     </div>
 
-    <!-- Facility Showcase Section -->
+    <!-- Corrected Showcase Section Mapping -->
     <section class="showcase-section animated-section">
-        <img src="clinic-view.png" alt="Physiotherapy Studio Setup" class="showcase-img">
+        <img src="clinic-view.png" alt="Advanced Physiotherapy Clinic Setup" class="showcase-img">
         <div class="showcase-text">
             <h2>Advanced Clinical Rehabilitation Setup</h2>
             <p>Our infrastructure features specialized clinical assessment gear to treat complex muscle disorders, balance rehabilitation goals, and post-surgical bone recovery tracks smoothly.</p>
@@ -438,26 +450,26 @@
         </div>
     </section>
 
-    <!-- Services Section (Corrected Filenames Applied Here) -->
+    <!-- Corrected Services Grid Section Mapping -->
     <section class="services" id="services">
         <h2>Move Freely, Live Fully With Our Care</h2>
         <div class="services-grid">
             <div class="service-card">
-                <img src="service-ortho.jpg" alt="Orthopedic Rehabilitation">
+                <img src="clinic-ortho.png" alt="Orthopedic Conditions Treatment">
                 <div class="service-info">
                     <h3>Ortho & Joint Rehab</h3>
                     <p>Advanced treatment for corporate spinal alignments, posture correction, chronic back pain, and complete post-surgical orthopedic solutions.</p>
                 </div>
             </div>
             <div class="service-card">
-                <img src="service-neuro.png" alt="Neurological Therapy">
+                <img src="clinic-neuro.png" alt="Neurological Therapy Process">
                 <div class="service-info">
                     <h3>Neurological Therapy</h3>
                     <p>Dedicated clinical physical assessment pathways covering stroke recovery tracker metrics, paralysis, and balance exercises.</p>
                 </div>
             </div>
             <div class="service-card">
-                <img src="service-homecare.jpg" alt="Expert Home Care">
+                <img src="clinic-homecare.png" alt="In-Home Care Delivery Setup">
                 <div class="service-info">
                     <h3>Expert Home Care</h3>
                     <p>Compassionate, professional clinical rehabilitation setups brought directly to your bedroom or home space for maximum ease.</p>
@@ -466,20 +478,19 @@
         </div>
     </section>
 
-    <!-- Google Reviews Display -->
+    <!-- Automated Review Carousel Section -->
     <section class="reviews-section" id="reviews">
         <h2>What Patients Are Saying</h2>
         <p class="reviews-subtitle">Real verified feedback from our Google Maps Business Profile</p>
-        <div class="reviews-scroll-container">
-            <div class="review-screenshot-card"><img src="physio-review1.png" alt="Review 1"></div>
-            <div class="review-screenshot-card"><img src="physio-review2.png" alt="Review 2"></div>
-            <div class="review-screenshot-card"><img src="physio-review3.png" alt="Review 3"></div>
-            <div class="review-screenshot-card"><img src="physio-review4.png" alt="Review 4"></div>
-            <div class="review-screenshot-card"><img src="physio-review5.png" alt="Review 5"></div>
+        <div class="reviews-scroll-container" id="reviews-slider">
+            <div class="review-screenshot-card"><img src="physio-review1.png" alt="Google Review Card 1"></div>
+            <div class="review-screenshot-card"><img src="physio-review2.png" alt="Google Review Card 2"></div>
+            <div class="review-screenshot-card"><img src="physio-review3.png" alt="Google Review Card 3"></div>
+            <div class="review-screenshot-card"><img src="physio-review4.png" alt="Google Review Card 4"></div>
+            <div class="review-screenshot-card"><img src="physio-review5.png" alt="Google Review Card 5"></div>
         </div>
     </section>
 
-    <!-- Footer Structure -->
     <footer>
         <div class="footer-container">
             <div class="footer-box">
@@ -498,5 +509,31 @@
         </div>
     </footer>
 
+    <!-- 5-Second Automated Review Engine Script -->
+    <script>
+        const slider = document.getElementById('reviews-slider');
+        let index = 0;
+
+        function autoScrollReviews() {
+            if (!slider) return;
+            
+            const cards = slider.querySelectorAll('.review-screenshot-card');
+            if (cards.length === 0) return;
+
+            // Calculate exact scroll steps based on card dimension and container sizes
+            const cardWidth = cards[0].offsetWidth + 20; // Includes the 20px flex-gap
+            index++;
+
+            if (index >= cards.length - 1 || slider.scrollLeft >= (slider.scrollWidth - slider.clientWidth - 10)) {
+                index = 0;
+                slider.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                slider.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
+            }
+        }
+
+        // Trigger loop cycle precisely every 5000 milliseconds
+        setInterval(autoScrollReviews, 5000);
+    </script>
 </body>
 </html>
